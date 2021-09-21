@@ -1,0 +1,53 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Alegreya Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: $baseFontSize;
+  line-height: 1.42;
+  
+}
+
+.container {
+  width: $containerWidth;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+p {
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}

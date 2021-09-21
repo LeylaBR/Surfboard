@@ -1,0 +1,24 @@
+$gray: #666666;
+$black: #292929;
+
+$containerWidth: 940px;
+$baseFontSize: 18px;
+
+@import "./normalize.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;800&display=swap");
+
+@import "./layout.scss";
+@import "./components/_hero.scss";
+@import "./components/_header.scss";
+@import "./components/_features.scss";
+@import "./components/_button.scss";
+@import "./components/_section.scss";
+@import "./components/_benefits.scss";
+@import "./components/headline";
+@import "./components/reviews";
+@import "./components/order";
+@import "./components/form";
+@import "./components/fixed-menu";
+@import "./components/map";
+@import "./components/footer";

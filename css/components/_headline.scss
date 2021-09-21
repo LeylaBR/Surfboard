@@ -1,0 +1,15 @@
+.headline {
+  margin-bottom: 49px;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 17px;
+  }
+}
+
+.headline__subtitle {
+  color: $gray;
+  font-weight: 400;
+  padding: 0px 27%;
+  line-height: 22px;
+}

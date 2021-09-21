@@ -1,0 +1,11 @@
+.map {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.map__img {
+  background: url(../img/map.png) center center/cover no-repeat;
+  flex: 1;
+}

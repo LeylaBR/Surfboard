@@ -1,0 +1,26 @@
+.button {
+  color: #000000;
+  padding: 19px 36px;
+  background: #FEDB3F;
+  border-radius: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  line-height: 18px;
+
+  &:hover {
+    background: #ffd517;
+  }
+}
+
+.button__transparent {
+  background: transparent;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-weight: normal;
+
+  &:hover {
+    background: transparent;
+    text-decoration: none;
+  }
+}
