@@ -1,12 +1,12 @@
 .button {
   color: #000000;
-  padding: 19px 36px;
+  padding: rem(19px) rem(36px);
   background: #FEDB3F;
-  border-radius: 60px;
+  border-radius: rem(60px);
   font-weight: bold;
   text-transform: uppercase;
   border: none;
-  line-height: 18px;
+  line-height: rem(18px);
 
   &:hover {
     background: #ffd517;

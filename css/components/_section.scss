@@ -4,12 +4,26 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 652px;
+  min-height: rem(652px);
   text-align: center;
+
+  @include phones 
+  {
+    height: auto;
+  }
+
 
   &__title {
     text-transform: uppercase;
-    font-size: 48px;
-    line-height: 58px;
+    font-size: rem(48px);
+    line-height: rem(58px);
+
+    @include phones 
+  {
+    font-size: rem(40px); 
+    line-height: rem(36px);   
   }
-}
+  
+  }
+  }
+

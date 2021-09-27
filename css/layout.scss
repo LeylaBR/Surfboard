@@ -1,7 +1,21 @@
+html {
+  font-size: $baseFontSize;
+ 
+@include  tablets {
+  font-size: $baseFontSize - 1px;
+}
+
+@include  phones {
+  font-size: $baseFontSize - 2px;
+  
+}
+}
+
 html,
 body {
   height: 100%;
 }
+
 
 body {
   font-family: "Alegreya Sans", sans-serif;
@@ -12,9 +26,24 @@ body {
   
 }
 
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
 .container {
-  width: $containerWidth;
+  width: 95%;
+  max-width: rem(940px);
   margin: 0 auto;
+
+  @include phones 
+  {
+    padding: 8% 0;
+  }
+
+ 
 }
 
 * {
@@ -48,6 +77,4 @@ p {
   margin: 0;
 }
 
-div {
-  box-sizing: border-box;
-}
+

@@ -1,10 +1,14 @@
 .features,
 .feature {
   display: flex;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .features__item {
-  margin-right: 33px;
+  margin-right: rem(33px);
 
   &:last-child {
     margin-right: 0;
@@ -12,11 +16,19 @@
 }
 
 .features__icon {
-  margin-right: 14px;
+  margin-right: rem(14px);
+}
+
+.features__icon-img {
+  width: 35px;
+  height: 35px;
+  fill: white;
+  
 }
 
 .features__text {
-  max-width: 90px;
-  font-size: 16px;
-  line-height: 18px;
+  max-width: rem(90px);
+  font-size: rem(16px);
+  line-height: rem(18px);
 }
+

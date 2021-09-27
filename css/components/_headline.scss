@@ -1,15 +1,25 @@
 .headline {
-  margin-bottom: 49px;
+  margin-bottom: rem(49px);
   text-align: center;
 
   &__title {
-    margin-bottom: 17px;
+    margin-bottom: rem(17px);
   }
 }
 
 .headline__subtitle {
   color: $gray;
   font-weight: 400;
-  padding: 0px 27%;
-  line-height: 22px;
+  padding: rem(0px) 27%;
+  line-height: rem(22px);
+
+  @include tablets 
+  {
+    padding: rem(0px) 20%;    
+  }
+
+  @include phones 
+  {
+    padding: 0 2%;    
+  }
 }

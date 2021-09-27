@@ -22,10 +22,22 @@
 }
 
 .order__title {
-  margin-bottom: 59px;
+  margin-bottom: rem(59px);
+
+  @include tablets {
+    margin-bottom: rem(22px);
+  }
+
+  
 }
 
 .order__button {
-  text-align: right;
-  width: 82%;
+  text-align: left; 
+  
+  @include tablets {
+    text-align: center; 
+  }
+
 }
+
+

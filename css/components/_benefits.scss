@@ -2,6 +2,24 @@
   text-align: center;
   display: flex;
 
+  @include phones 
+  {
+    flex-direction: column;   
+  }
+
+  &__info {
+    @include phones 
+    {
+      display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 73%;
+    text-align: left; 
+    padding: 2% 0; 
+    }
+  }
+
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -9,6 +27,14 @@
     flex: 1;
     margin: 0 2%;
     position: relative;
+
+    @include phones 
+    {
+      flex-direction: row;
+      margin: 0;
+      margin-bottom: rem(11px);
+    }
+   
 
     &:first-child {
       margin-left: 0;
@@ -21,30 +47,48 @@
         display: none;
       }
     }
-
+   
     &::before {
-      content: url(../img/shape.png);
       position: absolute;
       right: 0;
-      top: 61px;
+      top: rem(61px);
       transform: translateX(80%);
+
+      @media screen and (min-width: 768px) {
+        content: url(../img/shape.svg);
+      }
     }
+
+    &::before {
+      @include tablets 
+    {
+      display: none;      
+    }
+    }
+
   }
 
   &__img {
     background: #f2f5f4;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
     overflow: hidden;
     display: inline-block;
     position: relative;
     width: 128px;
     height: 128px;
+
+    @include phones 
+    {
+      margin-bottom: 0;
+      margin-right: rem(12px);
+    }
+
   }
 
   &__icon {
-    width: 68px;
-    height: 68px;
+    width: rem(68px);
+    height: rem(73px);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,8 +96,13 @@
   }
 
   &__title {
-    font-size: 27px;
-    margin-bottom: 20px;
+    font-size: rem(27px);
+    margin-bottom: rem(20px);
+
+    @include phones 
+    {
+      margin-bottom: rem(10px);
+    }
   }
 
   &__text {
