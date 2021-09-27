@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=1200" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/main.css" />
     <title>Surfboard</title>
   </head>
@@ -11,46 +11,55 @@
     <div class="wrapper">
       <div class="maincontent">
         <section class="hero">
+          <header class="header">
+            <div class="container header__container">
+            <a href="#" class="logo">
+              <svg class="logo__img">
+                <use xlink:href="./img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#" class="menu__link">О нас</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Серфборды</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Команда</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Меню</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Отзывы</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Как мы работаем</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <address class="contacts">
+              <a href="tel:+78009039090" class="contacts__phone"
+                > <svg class="contacts__phone-icon">
+                  <use xlink:href="./img/sprite.svg#phone"></use>
+                </svg> 8 800 903 90 90</a
+              >
+              
+            </address>
+            <a href="#" class="hamburger">
+              <span class="hamburger__plank"></span>
+              <span class="hamburger__plank"></span>
+              <span class="hamburger__plank"></span>
+            </a>
+          </div>
+          </header>
           <div class="container hero__container">
-            <header class="header">
-              <a href="#" class="logo">
-                <img
-                  src="./img/logo.png"
-                  alt="Surfboard logo"
-                  class="logo__img"
-                />
-              </a>
-              <nav class="menu">
-                <ul class="menu__list">
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">О нас</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">Серфборды</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">Команда</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">Меню</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">Отзывы</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">Как мы работаем</a>
-                  </li>
-                  <li class="menu__item">
-                    <a href="#" class="menu__link">Контакты</a>
-                  </li>
-                </ul>
-              </nav>
-              <address class="contacts">
-                <a href="tel:+78009039090" class="contacts__phone"
-                  >8 800 903 90 90</a
-                >
-              </address>
-            </header>
+            
             <div class="hero__desc">
               <h1 class="hero__desc-title">
                 Профессиональные доски для серфинга
@@ -64,19 +73,25 @@
               <ul class="features">
                 <li class="features__item feature">
                   <div class="features__icon">
-                    <img src="./img/design.png" alt="design" />
+                    <svg class="features__icon-img">
+                      <use xlink:href="./img/sprite.svg#design"></use>
+                    </svg>                   
                   </div>
                   <div class="features__text">Уникальный дизайн</div>
                 </li>
                 <li class="features__item feature">
                   <div class="features__icon">
-                    <img src="./img/materials.png" alt="materials" />
+                    <svg class="features__icon-img">
+                      <use xlink:href="./img/sprite.svg#materials"></use>
+                    </svg>
                   </div>
                   <div class="features__text">Прочные материалы</div>
                 </li>
                 <li class="features__item feature">
                   <div class="features__icon">
-                    <img src="./img/delivery.png" alt="delivery" />
+                    <svg class="features__icon-img">
+                      <use xlink:href="./img/sprite.svg#delivery"></use>
+                    </svg> 
                   </div>
                   <div class="features__text">Быстрая доставка</div>
                 </li>
@@ -96,12 +111,11 @@
             <ul class="benefits">
               <li class="benefits__item">
                 <div class="benefits__img">
-                  <img
-                    src="./img/Perfect Fit.svg"
-                    alt="Perfect Fit"
-                    class="benefits__icon"
-                  />
+                  <svg class="benefits__icon">
+                    <use xlink:href="./img/sprite.svg#perfectFit"></use>
+                  </svg>
                 </div>
+                <div class="benefits__info">
                 <h3 class="benefits__title">Perfect Fit</h3>
                 <div class="benefits__text">
                   <p>
@@ -109,15 +123,15 @@
                     создании ваш рост, вес и уровень подготовки.
                   </p>
                 </div>
+              </div>
               </li>
               <li class="benefits__item">
                 <div class="benefits__img">
-                  <img
-                    src="./img/Strong.svg"
-                    alt="Strong"
-                    class="benefits__icon"
-                  />
+                  <svg class="benefits__icon">
+                    <use xlink:href="./img/sprite.svg#strong"></use>
+                  </svg>
                 </div>
+                <div class="benefits__info">
                 <h3 class="benefits__title">Strong</h3>
                 <div class="benefits__text">
                   <p>
@@ -125,15 +139,15 @@
                     Ваша доска прослужит вам долгие годы.
                   </p>
                 </div>
+              </div>
               </li>
               <li class="benefits__item">
                 <div class="benefits__img">
-                  <img
-                    src="./img/Unique.svg"
-                    alt="Unique"
-                    class="benefits__icon"
-                  />
+                  <svg class="benefits__icon">
+                    <use xlink:href="./img/sprite.svg#unique"></use>
+                  </svg>
                 </div>
+                <div class="benefits__info">
                 <h3 class="benefits__title">Unique</h3>
                 <div class="benefits__text">
                   <p>
@@ -141,6 +155,7 @@
                     выполнена по вашему уникальному дизайну.
                   </p>
                 </div>
+              </div>
               </li>
             </ul>
           </div>
@@ -270,59 +285,71 @@
                     <div class="radio__title">Не перезванивать</div>
                   </label>
                 </div>
+                <div class="order__button">
+                  <input type="submit" value="Заказать" class="button" />
+                  <input
+                    type="reset"
+                    value="Очистить"
+                    class="button button__transparent"
+                  />
+                </div>
               </div>
+              
             </form>
-            <div class="order__button">
-              <input type="submit" value="Заказать" class="button" />
-              <input
-                type="reset"
-                value="Очистить"
-                class="button button__transparent"
-              />
-            </div>
+            
           </div>
         </section>
         <section class="map">
           <div class="map__img"></div>
-          <div class="container">
+          
             <footer class="footer">
+              <div class="container footer__container">
                 <address class="footer__contacts">
                   <div class="contacts__address">
                     Москва, ул.Новый Арбат, д.31/12
                   </div>
                   <a href="tel:+78007003030" class="footer__contacts-phone"
-                    >8 800 700 30 30</a
+                    ><svg class="contacts__phone-icon">
+                      <use xlink:href="./img/sprite.svg#phone"></use>
+                    </svg>  8 800 700 30 30</a
                   >
                 </address>
                 <div class="socials">
                   <ul class="socials__list">
                     <li class="socials__item">
                       <a href="vk.com" class="socials__link">
-                        <div class="socials__icon socials__icon-vk"></div>
+                        <svg class="socials__icon socials__icon-vk">
+                          <use xlink:href="./img/sprite.svg#vk"></use>
+                        </svg>
                       </a>
                     </li>
                     <li class="socials__item">
                       <a href="facebook.com" class="socials__link">
-                        <div class="socials__icon socials__icon-facebook"></div>
+                        <svg class="socials__icon socials__icon-vk">
+                          <use xlink:href="./img/sprite.svg#fb"></use>
+                        </svg>
                       </a>
                     </li>
                     <li class="socials__item">
                       <a href="instagram.com" class="socials__link">
-                        <div
-                          class="socials__icon socials__icon-instagram"
-                        ></div>
+                        <svg class="socials__icon socials__icon-vk">
+                          <use xlink:href="./img/sprite.svg#ins"></use>
+                        </svg>
                       </a>
                     </li>
                     <li class="socials__item">
                       <a href="twitter.com" class="socials__link">
-                        <div class="socials__icon socials__icon-twitter"></div>
+                        <svg class="socials__icon socials__icon-vk">
+                          <use xlink:href="./img/sprite.svg#tw"></use>
+                        </svg>
                       </a>
                     </li>
                   </ul>
                 </div>
-              
+              </div>
             </footer>
-          </div>
+          
+
         </section>
       </div>
     </div>
