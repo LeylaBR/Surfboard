@@ -1,17 +1,28 @@
-const openHamburger = document.querySelector("#menuHamburger");
-const menu = document.querySelector("#menu");
-const menuClose = document.querySelector("#menu-close")
-const body = document.body;
+const openHamburger = $("#menuHamburger");
+const menu = $("#menu");
+const menuClose = $("#menu-close");
+const menuAppearing = $(".hamburger__menu-link");
+const body = $("body");
 
+console.log(menuAppearing);
 
-openHamburger.addEventListener("click", event => {
-    menu.style.display = "block";
-    body.style.overflow = "hidden";
+$(document).ready(() => {
+  openHamburger.on("click", (e) => {
+    menu.css("display", "block");
+    body.css("overflow", "hidden");
+  });
 
-    menuClose.addEventListener("click", event => {
-        event.preventDefault()
-        menu.style.display = "none";
-        body.style.overflow = "initial";
+  menuClose.on("click", (e) => {
+    e.preventDefault();
+    menu.css("display", "none");
+    body.css("overflow", "initial");
+  });
+
+  menuAppearing.each((_, link) => {
+    $(link).on("click", (e) => {
+      e.preventDefault();
+      menu.css("display", "none");
+      body.css("overflow", "initial");
     });
+  });
 });
-

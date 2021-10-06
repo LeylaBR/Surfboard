@@ -154,19 +154,19 @@
             </ul>
           </div>
         </section>
-        <section class="shop__section section">
-          <div class="shop__container container">
-            <a href="#" class="shop__pointer pointer__left">
+        <section class="shop section" id="surfboard">
+          <div class="container">
+            <a href="#" class="shop__pointer shop__pointer-left">
               <svg class="shop__pointer-img">
                 <use xlink:href="./img/sprite.svg#left"></use>
               </svg>
             </a>
             <div class="shop__content">
-              <div class="shop__img">
+              <div class="shop__content-img">
                 <img
                   src="./img/product.png"
                   alt="product"
-                  class="shop__img-icon"
+                  class="shop__content-icon"
                 />
               </div>
               <div class="shop__info">
@@ -238,12 +238,12 @@
                 </div>
                 <div class="shop__parameters">
                   <div class="shop__parameter">
-                    <span class="shop__parameter-subtitle">Длина доски</span>
-                    <span class="shop__parameter-info">от 2,5 метров</span>
+                    <div class="shop__parameter-subtitle">Длина доски</div>
+                    <div class="shop__parameter-info">от 2,5 метров</div>
                   </div>
                   <div class="shop__parameter">
-                    <span class="shop__parameter-subtitle">Ширина доски</span>
-                    <span class="shop__parameter-info">от 40 сантиметров</span>
+                    <div class="shop__parameter-subtitle">Ширина доски</div>
+                    <div class="shop__parameter-info">от 40 сантиметров</div>
                   </div>
                 </div>
                 <div class="shop__info-order">
@@ -252,7 +252,7 @@
                 </div>
               </div>
             </div>
-            <a href="#" class="shop__pointer pointer__right">
+            <a href="#" class="shop__pointer shop__pointer-right">
               <svg class="shop__pointer-img">
                 <use xlink:href="./img/sprite.svg#right"></use>
               </svg>
@@ -497,7 +497,7 @@
             <a href="#" class="hamburger__menu-link">О нас</a>
           </li>
           <li class="hamburger__menu-item">
-            <a href="#" class="hamburger__menu-link">Серфборды</a>
+            <a href="#surfboard" class="hamburger__menu-link">Серфборды</a>
           </li>
           <li class="hamburger__menu-item">
             <a href="#" class="hamburger__menu-link">Команда</a>
@@ -517,6 +517,7 @@
         </ul>
       </div>
     </div>
+    <script src="./jquery-3.6.0.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
