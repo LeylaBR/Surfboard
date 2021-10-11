@@ -19,12 +19,57 @@ menuClose.addEventListener("click", (e) => {
 
 menuAppearing.forEach((link) => {
   link.addEventListener("click", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     setStyles("none", "initial");
   });
 });
 
+const openDescription = $(".team__desc-info");
 
+openDescription.each((_, link) => {
+  $(link).on("click", (e) => {
+    openDescription.each((_, elem) => {
+      if (e.currentTarget !== elem) {
+        $(elem).parent().removeClass("active");
+      }
+    });
+    $(e.currentTarget).parent().toggleClass("active");
+  });
+});
 
+const openReviews = $(".reviews__switcher-item");
+const openItems = $(".reviews__item");
 
+openReviews.each((_, link) => {
+  $(link).on("click", (e) => {
+    e.preventDefault();
+    openReviews.each((index, elem) => {
+      if ($(elem).hasClass("active")) {
+        $(elem).removeClass("active");
+        $(openItems[index]).removeClass("active");
+      }
+      if (elem === e.currentTarget) {
+        $(elem).addClass("active");
+        $(openItems[index]).addClass("active");
+      }
+    });
+  });
+});
 
+const pointerLeft = $(".shop__pointer-left");
+const pointerRight = $(".shop__pointer-right");
+
+const slider = $(".shop__content-list").bxSlider({
+  pager: false,
+  controls: false,
+});
+
+pointerLeft.click((e) => {
+  e.preventDefault();
+  slider.goToPrevSlide();
+});
+
+pointerRight.click((e) => {
+  e.preventDefault();
+  slider.goToNextSlide();
+});
