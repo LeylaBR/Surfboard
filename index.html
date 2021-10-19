@@ -6,19 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
     />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./main.min.css" />
     <title>Surfboard</title>
   </head>
   <body>
     <div class="wrapper">
       <div class="maincontent">
-        <section class="hero">
+        <section
+          class="hero"
+          data-sidemenu-theme="white"
+          data-section-id="hero"
+        >
           <header class="header">
             <div class="container header__container">
               <a href="#" class="logo">
@@ -29,25 +37,39 @@
               <nav class="menu">
                 <ul class="menu__list">
                   <li class="menu__item">
-                    <a href="#" class="menu__link">О нас</a>
+                    <a href="#" data-scroll-to="about" class="menu__link"
+                      >О нас</a
+                    >
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Серфборды</a>
+                    <a href="#" data-scroll-to="shop" class="menu__link"
+                      >Серфборды</a
+                    >
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Команда</a>
+                    <a href="#" data-scroll-to="team" class="menu__link"
+                      >Команда</a
+                    >
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Меню</a>
+                    <a href="#" data-scroll-to="menuSlider" class="menu__link"
+                      >Меню</a
+                    >
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Отзывы</a>
+                    <a href="#" data-scroll-to="reviews" class="menu__link"
+                      >Отзывы</a
+                    >
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Как мы работаем</a>
+                    <a href="#" data-scroll-to="player" class="menu__link"
+                      >Как мы работаем</a
+                    >
                   </li>
                   <li class="menu__item">
-                    <a href="#" class="menu__link">Контакты</a>
+                    <a href="#" data-scroll-to="contacts" class="menu__link"
+                      >Контакты</a
+                    >
                   </li>
                 </ul>
               </nav>
@@ -69,7 +91,9 @@
               <div class="hero__desc-text">
                 Самый большой выбор серфбордов в мире
               </div>
-              <a href="#surfboard" class="button hero__button">Заказать</a>
+              <a href="#" data-scroll-to="order" class="button hero__button"
+                >Заказать</a
+              >
             </div>
             <div class="hero__icon">
               <ul class="features">
@@ -101,7 +125,11 @@
             </div>
           </div>
         </section>
-        <section class="section" id="about">
+        <section
+          class="about section"
+          data-sidemenu-theme="black"
+          data-section-id="about"
+        >
           <div class="container">
             <div class="headline">
               <h2 class="section__title headline__title">почему Surfboard?</h2>
@@ -162,7 +190,11 @@
             </ul>
           </div>
         </section>
-        <section class="shop section" id="surfboard">
+        <section
+          class="shop section"
+          data-sidemenu-theme="black"
+          data-section-id="shop"
+        >
           <div class="container">
             <a href="#" class="shop__pointer shop__pointer-left">
               <svg class="shop__pointer-img">
@@ -264,7 +296,7 @@
                   </div>
                   <div class="shop__info-order">
                     <div class="shop__info-price">7000 ₽</div>
-                    <a href="#order" class="button shop__button">Заказать</a>
+                    <a href="#ordered" class="button shop__button">Заказать</a>
                   </div>
                 </div>
               </li>
@@ -363,7 +395,11 @@
             </ul>
           </div>
         </section>
-        <section class="team section" id="team">
+        <section
+          class="team section"
+          data-sidemenu-theme="black"
+          data-section-id="team"
+        >
           <div class="container">
             <h2 class="team__title section__title">команда</h2>
             <ul class="team__list">
@@ -446,7 +482,90 @@
             </ul>
           </div>
         </section>
-        <section class="reviews section" id="reviews">
+        <section
+          class="menu-slider section"
+          data-sidemenu-theme="white"
+          data-section-id="menuSlider"
+        >
+          <h1 class="menu-slider__title section__title">Меню</h1>
+
+          <ul class="menu-slider__list">
+            <li class="menu-slider__item">
+              <a class="menu-slider__subtitle">
+                <img
+                  class="menu-slider__img"
+                  src="./img/longboard.png"
+                  alt="longboard"
+                />
+                <div class="menu-slider__text">Лонгборды</div>
+              </a>
+              <div class="menu-slider__desc">
+                <div class="menu-slider__desc-container">
+                  <div class="menu-slider__desc-text">
+                    Устойчивая доска для новичков. На них легко лежать, сидеть,
+                    грести, разгребаться на волны и ехать. Размер и плавучесть
+                    доски позволяет брать очень маленькие и пологие волны и не
+                    спеша, не прилагая особых усилий ехать по ним.
+                  </div>
+                  <svg class="menu-slider-close-icon">
+                    <use xlink:href="./img/sprite.svg#hamburgerMenu"></use>
+                  </svg>
+                </div>
+              </div>
+            </li>
+            <li class="menu-slider__item">
+              <a class="menu-slider__subtitle">
+                <img
+                  class="menu-slider__img"
+                  src="./img/shortboards.png"
+                  alt="shortboards"
+                />
+                <div class="menu-slider__text">Шортборды</div>
+              </a>
+              <div class="menu-slider__desc">
+                <div class="menu-slider__desc-container">
+                  <div class="menu-slider__desc-text">
+                    Устойчивая доска для новичков. На них легко лежать, сидеть,
+                    грести, разгребаться на волны и ехать. Размер и плавучесть
+                    доски позволяет брать очень маленькие и пологие волны и не
+                    спеша, не прилагая особых усилий ехать по ним.
+                  </div>
+                  <svg class="menu-slider-close-icon">
+                    <use xlink:href="./img/sprite.svg#hamburgerMenu"></use>
+                  </svg>
+                </div>
+              </div>
+            </li>
+            <li class="menu-slider__item">
+              <a class="menu-slider__subtitle">
+                <img
+                  class="menu-slider__img"
+                  src="./img/softtops.png"
+                  alt="softtops"
+                />
+                <div class="menu-slider__text">Софттопы</div>
+              </a>
+              <div class="menu-slider__desc">
+                <div class="menu-slider__desc-container">
+                  <div class="menu-slider__desc-text">
+                    Устойчивая доска для новичков. На них легко лежать, сидеть,
+                    грести, разгребаться на волны и ехать. Размер и плавучесть
+                    доски позволяет брать очень маленькие и пологие волны и не
+                    спеша, не прилагая особых усилий ехать по ним.
+                  </div>
+                  <svg class="menu-slider-close-icon">
+                    <use xlink:href="./img/sprite.svg#hamburgerMenu"></use>
+                  </svg>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section
+          class="reviews section"
+          data-sidemenu-theme="black"
+          data-section-id="reviews"
+        >
           <div class="container">
             <h2 class="reviews__title section__title">Отзывы</h2>
             <ul class="reviews__list">
@@ -546,8 +665,58 @@
             </nav>
           </div>
         </section>
-        <section class="order section" id="order">
-          <div class="container">
+        <section
+          class="player__section section"
+          data-sidemenu-theme="black"
+          data-section-id="player"
+        >
+          <div class="container player__container">
+            <h2 class="player__title section__title">как мы работаем</h2>
+            <div class="player-section__container">
+              <div class="player">
+                <div class="player__wrapper">
+                  <div class="player__elem" id="yt-player"></div>
+                  <div class="player__splash">
+                    <svg class="player__splash-play">
+                      <use xlink:href="./img/sprite.svg#play"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="player__controls">
+                  <button class="player__start">
+                    <svg class="player__start-play">
+                      <use xlink:href="./img/sprite.svg#startPlay"></use>
+                    </svg>
+                    <div class="player-paused">
+                      <div class="player-paused__plank"></div>
+                      <div class="player-paused__plank"></div>
+                    </div>
+                  </button>
+                  <div class="player__playback">
+                    <div class="player__playback-yellow"></div>
+                    <button class="player__playback-button"></button>
+                  </div>
+                  <button class="player__volume">
+                    <svg class="player__volume-start">
+                      <use xlink:href="./img/sprite.svg#volume"></use>
+                    </svg>
+                    <div class="player-volume__plank"></div>
+                  </button>
+                  <div class="player__volume-regulate">
+                    <div class="player__volume__regulate-yellow"></div>
+                    <div class="player__volume__button"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="order section"
+          data-sidemenu-theme="white"
+          data-section-id="order"
+        >
+          <div class="container" id="ordered">
             <h2 class="order__title section__title">закажите доску</h2>
             <form class="form">
               <input type="hidden" name="to" value="my@mail.com" />
@@ -638,8 +807,12 @@
             </form>
           </div>
         </section>
-        <section class="map" id="contacts">
-          <div class="map__img"></div>
+        <section
+          class="map"
+          data-sidemenu-theme="black"
+          data-section-id="contacts"
+        >
+          <div class="map__img" id="map"></div>
           <footer class="footer">
             <div class="container footer__container">
               <address class="footer__contacts">
@@ -703,32 +876,32 @@
     </div>
     <nav class="fixed-menu">
       <ul class="fixed-menu__list">
-        <li class="fixed-menu__item fixed-menu__item--active">
-          <a href="#" class="fixed-menu__link"></a>
+        <li class="fixed-menu__item active">
+          <a href="#" data-scroll-to="hero" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="about" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="shop" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="team" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="menuSlider" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="reviews" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="player" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="order" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="contacts" class="fixed-menu__link"></a>
         </li>
       </ul>
     </nav>
@@ -746,34 +919,53 @@
       <div class="hamburger__menu-container">
         <ul class="hamburger__menu-list">
           <li class="hamburger__menu-item">
-            <a href="#about" class="hamburger__menu-link">О нас</a>
+            <a href="#" data-scroll-to="about" class="hamburger__menu-link"
+              >О нас</a
+            >
           </li>
           <li class="hamburger__menu-item">
-            <a href="#surfboard" class="hamburger__menu-link">Серфборды</a>
+            <a href="#" data-scroll-to="shop" class="hamburger__menu-link"
+              >Серфборды</a
+            >
           </li>
           <li class="hamburger__menu-item">
-            <a href="#team" class="hamburger__menu-link">Команда</a>
+            <a href="#" data-scroll-to="team" class="hamburger__menu-link"
+              >Команда</a
+            >
           </li>
           <li class="hamburger__menu-item">
-            <a href="#" class="hamburger__menu-link">Меню</a>
+            <a href="#" data-scroll-to="menuSlider" class="hamburger__menu-link"
+              >Меню</a
+            >
           </li>
           <li class="hamburger__menu-item">
-            <a href="#reviews" class="hamburger__menu-link">Отзывы</a>
+            <a href="#" data-scroll-to="reviews" class="hamburger__menu-link"
+              >Отзывы</a
+            >
           </li>
           <li class="hamburger__menu-item">
-            <a href="#" class="hamburger__menu-link">Как мы работаем</a>
+            <a href="#" data-scroll-to="player" class="hamburger__menu-link"
+              >Как мы работаем</a
+            >
           </li>
           <li class="hamburger__menu-item">
-            <a href="#contacts" class="hamburger__menu-link">Контакты</a>
+            <a href="#" data-scroll-to="contacts" class="hamburger__menu-link"
+              >Контакты</a
+            >
           </li>
         </ul>
       </div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <!-- <script src="./jquery-3.6.0.min.js"></script> -->
-    <script src="./script.js"></script>
-    <script src="./modal.js"></script>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="./main.min.js"></script>
   </body>
 </html>
